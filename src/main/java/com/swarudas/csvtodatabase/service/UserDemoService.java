@@ -32,7 +32,7 @@ public class UserDemoService {
         logger.info("Saving list of Users of size {}; {}", userDemoList.size(), Thread.currentThread().getName());
         repository.saveAll(userDemoList);
         long end = System.currentTimeMillis();
-        logger.info("Total time taken: {}", (end - start));
+        logger.info("Total time taken: {}ms", (end - start));
 
         return CompletableFuture.completedFuture(userDemoList);
     }
